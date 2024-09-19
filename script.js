@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
 
   const stringFilter = strangeArray.filter((strangeArray) => typeof strangeArray === "string") // Acá filtro los elementos tipo string
-    .sort(); // .sort ordena alfabéticamente
+    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())); // .sort ordena alfabéticamente, .toLowerCase (a,b) convierte a minúsculas y .localeCompare para que el orden sea preciso
 
 
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
